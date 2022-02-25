@@ -1,0 +1,19 @@
+{
+  "name": "spectre",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.8.0"
+  },
+  "dependencies": {
+    "@codemirror/basic-setup": "^0.19.1",
+    "@codemirror/lang-javascript": "^0.19.7",
+    "@codemirror/lang-python": "^0.19.4",
+    "@codemirror/theme-one-dark": "^0.19.1"
+  }
+}
