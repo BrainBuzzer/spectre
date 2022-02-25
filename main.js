@@ -23,18 +23,12 @@ async function main() {
 main();
 
 async function runPythonClick() {
-  let logs = [];
-  let oldLog = console.log;
-  console.log = function (message) {
-    logs.push(message);
-  };
   document.querySelector("#output").innerHTML =
     "<pre><code><span class='debug'>Loading...</span></code></pre>";
   let code = view.state.sliceDoc();
   let output = await pyodide.runPythonAsync(code);
   document.querySelector("#output").innerHTML =
     "<pre><code><span class='debug'>" + output + "</span></code></pre>";
-  oldLog(logs);
 }
 
 document.querySelector("#run").addEventListener("click", runPythonClick);
